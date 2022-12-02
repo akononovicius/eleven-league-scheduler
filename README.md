@@ -29,9 +29,10 @@ matches against other non-human teams.
 
 ## Matches between non-human teams
 
-Matches between non-human teams are resolved by rolling Opponent die and a
-standard d6 die. Opponent die rolls determine number of goals scored for
-each team, while standard d6 die slightly modifies the results.
+Matches between non-human teams are resolved by rolling Opponent dice and a
+standard six-sided die (one per match). Opponent die rolls determine number
+of goals scored for each team, while standard die slightly modifies the
+results.
 
 If non-human teams come from different division (e.g., "Division 3" and
 "Division 3/2"), then teams from stronger division scores an additional
