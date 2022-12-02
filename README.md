@@ -39,7 +39,7 @@ If non-human teams come from different divisions (e.g., "Division 3" and
 goal.
 
 Also, red teams score additional goal if the standard die rolled 4 or more.
-Green team scores subtracts one goal if the standard die rolled 3 or less
+Green team subtracts one goal if the standard die rolled 3 or less
 (they score at least 0 goals).
 
 Blue team changes their "behavior" depending on their opponent. Against
