@@ -35,7 +35,7 @@ determine number of goals scored for each team, while the standard die
 slightly modifies the results.
 
 If non-human teams come from different divisions (e.g., "Division 3" and
-"Division 3/2"), then team from a stronger division scores an additional
+"Division 3/2"), then team from a higher division scores an additional
 goal.
 
 Also, red teams score additional goal if the standard die rolled 4 or more.
