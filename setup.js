@@ -363,4 +363,11 @@
             switch_card("schedule-card");
         }
     });
+    let read_about_btn = document.getElementById("read-about");
+    read_about_btn.addEventListener("click", () => {
+        window.open(
+            "https://github.com/akononovicius/eleven-league-scheduler/blob/gh-pages/README.md",
+            "_self"
+        );
+    });
 })();
