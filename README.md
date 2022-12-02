@@ -29,20 +29,23 @@ matches against other non-human teams.
 
 ## Matches between non-human teams
 
-Matches between non-human teams are resolved by rolling Opponent dice and a
-standard six-sided die (one per match). Opponent die rolls determine number
-of goals scored for each team, while standard die slightly modifies the
-results.
+Matches between non-human teams are resolved by rolling two Opponent dice
+(of respective colors) and one standard six-sided die. Opponent dice rolls
+determine number of goals scored for each team, while the standard die
+slightly modifies the results.
 
-If non-human teams come from different division (e.g., "Division 3" and
-"Division 3/2"), then teams from stronger division scores an additional
+If non-human teams come from different divisions (e.g., "Division 3" and
+"Division 3/2"), then team from a stronger division scores an additional
 goal.
 
-Red teams score additional goal if the standard die rolled 4 or more.
+Also, red teams score additional goal if the standard die rolled 4 or more.
 Green team scores subtracts one goal if the standard die rolled 3 or less
-(they score at least 0 goals). When playing against green team blue team is
-treated as a red team. When playing red team blue team is treated as a green
-team.
+(they score at least 0 goals).
+
+Blue team changes their "behavior" depending on their opponent. Against
+green team they can potentially score additional goal (as if they were a red
+team). Against red team they can potentially loose a goal (as if they were a
+green team).
 
 ## Making your own schedules
 
