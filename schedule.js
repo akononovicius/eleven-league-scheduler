@@ -280,6 +280,7 @@
         document.getElementById("next-week").disabled =
             league.resolved < league.n_teams ||
             league.week == league.schedule[0].length - 1;
+        document.getElementById("next-week").style.display = "block";
     }
 
     function show_full_schedule() {
@@ -308,6 +309,7 @@
             elem.addEventListener("click", resolve);
         });
         document.getElementById("next-week").disabled = true;
+        document.getElementById("next-week").style.display = "none";
     }
 
     function refresh_schedule() {
