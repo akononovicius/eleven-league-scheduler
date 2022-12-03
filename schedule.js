@@ -126,7 +126,7 @@
             league.points
         );
         let html =
-            "<div class='row'><div class='col col-12 header text-center'>Tournament Table</div></div>";
+            "<div class='row'><h5 class='card-title text-center'>Tournament Table</h5></div>";
         ranking_order.forEach((v) => {
             html = `${html}${get_ranking_html(
                 league.teams[v],
