@@ -113,17 +113,58 @@
     }
 
     function show_rankings() {
-        const dsu = (arr1, arr2) =>
-            arr1
-                .map((item, index) => [arr2[index], item])
-                .sort(([arg1], [arg2]) => arg2 - arg1)
-                .map(([, item]) => item);
+        const dsu = (
+            team_names,
+            points,
+            scored_goals,
+            conceded_goals,
+            tie_break
+        ) =>
+            team_names
+                .map((item, index) => [
+                    item,
+                    index,
+                    points[index],
+                    scored_goals[index],
+                    conceded_goals[index],
+                    tie_break[index],
+                ])
+                .sort(
+                    (
+                        [, idx_1, points_1, scored_1, conceded_1, tie_1],
+                        [, idx_2, points_2, scored_2, conceded_2, tie_2]
+                    ) => {
+                        if (points_1 == points_2) {
+                            let goal_diff_1 = scored_1 - conceded_1;
+                            let goal_diff_2 = scored_2 - conceded_2;
+                            if (goal_diff_1 == goal_diff_2) {
+                                if (scored_1 == scored_2) {
+                                    let game_goals_1 =
+                                        league.game_results[idx_1];
+                                    let game_goals_2 =
+                                        league.game_results[idx_2];
+                                    if (game_goals_1 == game_goals_2) {
+                                        return tie_2 - tie_1;
+                                    }
+                                    return game_goals_2 - game_goals_1;
+                                }
+                                return scored_2 - scored_1;
+                            }
+                            return goal_diff_2 - goal_diff_1;
+                        }
+                        return points_2 - points_1;
+                    }
+                )
+                .map(([item]) => item);
 
         let ranking_order = dsu(
             Array(league.n_teams)
                 .fill(null)
                 .map((v, i) => i),
-            league.points
+            league.points,
+            league.scored,
+            league.conceded,
+            league.tie_break
         );
         let html =
             "<div class='row'><h5 class='card-title text-center'>Tournament Table</h5></div>";

@@ -351,6 +351,9 @@
         league.lost = Array(league.n_teams).fill(0);
         league.scored = Array(league.n_teams).fill(0);
         league.conceded = Array(league.n_teams).fill(0);
+        league.tie_break = Array(league.n_teams)
+            .fill(null)
+            .map((v) => Math.random());
 
         league.schedule = get_schedule(
             league.n_humans,
