@@ -139,14 +139,7 @@
                             let goal_diff_2 = scored_2 - conceded_2;
                             if (goal_diff_1 == goal_diff_2) {
                                 if (scored_1 == scored_2) {
-                                    let game_goals_1 =
-                                        league.game_results[idx_1];
-                                    let game_goals_2 =
-                                        league.game_results[idx_2];
-                                    if (game_goals_1 == game_goals_2) {
-                                        return tie_2 - tie_1;
-                                    }
-                                    return game_goals_2 - game_goals_1;
+                                    return tie_2 - tie_1;
                                 }
                                 return scored_2 - scored_1;
                             }
