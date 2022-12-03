@@ -109,7 +109,7 @@
 
     function get_ranking_html(team, points, w, d, l, s, c) {
         let team_class = get_team_class(team);
-        return `<div class="row"><div class="col col-4 team-name ${team_class}">${team.name}</div><div class="col col-4 ${team_class}">${w}-${d}-${l}</div><div class="col col-1 ${team_class}">${points}</div><div class="col col-3 ${team_class}">${s}:${c}</div></div>`;
+        return `<div class="row"><div class="col col-5 team-name ${team_class}">${team.name}</div><div class="col col-3 ${team_class}">${w}-${d}-${l}</div><div class="col col-2 ${team_class}">${points}</div><div class="col col-2 ${team_class}">${s}:${c}</div></div>`;
     }
 
     function show_rankings() {
