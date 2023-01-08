@@ -236,7 +236,7 @@
         ];
         let division21 = [
             { name: "Royalford Town", type: 1, division: 2 },
-            { name: "Stokepool City", type: 2, division: 2 },
+            { name: "Smokepool City", type: 2, division: 2 },
             { name: "Northdale Town", type: 2, division: 2 },
             { name: "Brighsbury F.C.", type: 0, division: 2 },
         ];
