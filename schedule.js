@@ -1,4 +1,6 @@
 (() => {
+    let shown_week = 0;
+
     function is_human_team(id) {
         let n_ai_teams =
             league.n_teams - league.n_humans - (league.n_humans % 2);
@@ -256,12 +258,12 @@
 
     function show_schedule() {
         let already_listed = [];
-        let html = `<h5 class="card-title">Week ${league.week + 1}</h5>`;
+        let html = `<h5 class="card-title">Week ${shown_week + 1}</h5>`;
         league.teams.forEach((team, team_id) => {
             if (already_listed.includes(team_id)) {
                 return;
             }
-            let against = league.schedule[team_id][league.week];
+            let against = league.schedule[team_id][shown_week];
             already_listed.push(team_id);
             already_listed.push(against);
             html = `${html}${get_game_html(team_id, against)}`;
@@ -271,9 +273,11 @@
             elem.addEventListener("click", resolve);
         });
         document.getElementById("next-week").disabled =
-            league.resolved < league.n_teams ||
-            league.week == league.schedule[0].length - 1;
-        document.getElementById("next-week").style.display = "block";
+            (shown_week == league.week && league.resolved < league.n_teams) ||
+            shown_week == league.schedule[0].length - 1;
+        document.getElementById("prev-week").disabled = shown_week == 0;
+        document.getElementById("next-week").style.display = "inline-block";
+        document.getElementById("prev-week").style.display = "inline-block";
     }
 
     function show_full_schedule() {
@@ -302,7 +306,9 @@
             elem.addEventListener("click", resolve);
         });
         document.getElementById("next-week").disabled = true;
+        document.getElementById("prev-week").disabled = true;
         document.getElementById("next-week").style.display = "none";
+        document.getElementById("prev-week").style.display = "none";
     }
 
     function refresh_schedule() {
@@ -323,7 +329,18 @@
 
     document.getElementById("next-week").addEventListener("click", () => {
         refresh_flag = true;
-        league.week = league.week + 1;
-        league.resolved = 0;
+        if (shown_week == league.week) {
+            league.week = league.week + 1;
+            shown_week = league.week;
+            league.resolved = 0;
+        } else {
+            shown_week = shown_week + 1;
+        }
+    });
+    document.getElementById("prev-week").addEventListener("click", () => {
+        if (shown_week > 0) {
+            refresh_flag = true;
+            shown_week = shown_week - 1;
+        }
     });
 })();
