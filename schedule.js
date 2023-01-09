@@ -269,7 +269,7 @@
             html = `${html}${get_game_html(team_id, against)}`;
         });
         document.getElementById("week-game-list").innerHTML = html;
-        document.querySelectorAll("#weekly-schedule .btn").forEach((elem) => {
+        document.querySelectorAll("#week-game-list .btn").forEach((elem) => {
             elem.addEventListener("click", resolve);
         });
         document.getElementById("next-week").disabled =
@@ -302,7 +302,7 @@
             html = `${html}<hr>`;
         }
         document.getElementById("week-game-list").innerHTML = html;
-        document.querySelectorAll("#weekly-schedule .btn").forEach((elem) => {
+        document.querySelectorAll("#week-game-list .btn").forEach((elem) => {
             elem.addEventListener("click", resolve);
         });
         document.getElementById("next-week").disabled = true;
