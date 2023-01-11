@@ -2,9 +2,14 @@
 
 JavaScript app which generates schedules for board game
 [Eleven](https://boardgamegeek.com/boardgame/329716/eleven-football-manager-board-game).
-Currently it supports Standard League mode (6 weeks) and Epic League mode
+Currently it supports Standard League mode (6 weeks) and Variant 
+Epic League mode
 (10 weeks). It also allows for player vs player matches, and it resolves
 matches between non-human opponents.
+
+Currently, it doesn't support [Official Epic League
+mode](https://boardgamegeek.com/thread/3001927/article/41487578#41487578),
+but it may be implemented some time in the future.
 
 ## Schedule
 
@@ -46,6 +51,29 @@ Blue team changes their "behavior" depending on their opponent. Against
 green team they can potentially score additional goal (as if they were a red
 team). Against red team they can potentially loose a goal (as if they were a
 green team).
+
+## Epic League variant
+
+Original rule book is pretty vague about how the opponent deck should be
+built when playing with the Epic League variant. After a while an official
+explanation on how to do it appeared on the [Board Game Geek
+forums](https://boardgamegeek.com/thread/3001927/article/41487578#41487578),
+but, personally, I do not like the official variant that much. I feel that
+there is just a minor difference between the divisions this way. So, I have
+decided to stay with my initial implementation of the Epic League.
+
+As implemented, Epic League can be played in two divisions. The lower
+(second) division is built from 3, 3/2 and 2/1 division opponent team decks.
+The higher (first) division is built from 3/2, 2/1 and 1 division opponent
+team decks. Either way first place three hardest opponent cards (from 2/1 or
+1 division deck), then four medium opponent cards (from 3/2 or 2/1
+respectively) and, finally, three easiest opponent cards (from 3 or 3/2
+respectively).
+
+For example, if you play in the first division, then first you will face 3
+opponents from 3/2 deck, then 2 opponents from 2/1 deck. After these five
+opponents do the winter break. Then face the other 2 opponents from 2/1
+deck, and finally 3 opponents from the 1 deck.
 
 ## Making your own schedules
 
