@@ -67,8 +67,8 @@ As implemented, Epic League can be played in two divisions. The lower
 The higher (first) division is built from 3/2, 2/1 and 1 division opponent
 team decks. Either way first place three hardest opponent cards (from 2/1 or
 1 division deck), then four medium opponent cards (from 3/2 or 2/1
-respectively) and, finally, three easiest opponent cards (from 3 or 3/2
-respectively).
+respectively) on top of them and, finally, three easiest opponent cards
+(from 3 or 3/2 respectively) on the very top of the opponent deck.
 
 For example, if you play in the first division, then first you will face 3
 opponents from 3/2 deck, then 2 opponents from 2/1 deck. After these five
