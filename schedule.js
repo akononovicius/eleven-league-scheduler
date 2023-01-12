@@ -345,7 +345,7 @@
     document.getElementById("reset-league").addEventListener("click", () => {
         let reply = confirm("Do you want to reset the league?");
         if (reply) {
-            window.localStorage.clear();
+            window.localStorage.removeItem("league");
             league = null;
             switch_card("game-setup-card");
         }
