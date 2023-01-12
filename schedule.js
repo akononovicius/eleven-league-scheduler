@@ -343,8 +343,11 @@
         }
     });
     document.getElementById("reset-league").addEventListener("click", () => {
-        window.localStorage.clear();
-        league = null;
-        switch_card("game-setup-card");
+        let reply = confirm("Do you want to reset the league?");
+        if (reply) {
+            window.localStorage.clear();
+            league = null;
+            switch_card("game-setup-card");
+        }
     });
 })();
