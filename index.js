@@ -17,4 +17,10 @@ function switch_card(to_card) {
     });
     document.getElementById(to_card).style.display = "block";
 }
-switch_card("game-setup-card");
+
+if (window.localStorage.length > 0) {
+    league = JSON.parse(window.localStorage.getItem("league"));
+    switch_card("schedule-card");
+} else {
+    switch_card("game-setup-card");
+}

@@ -276,8 +276,6 @@
             (shown_week == league.week && league.resolved < league.n_teams) ||
             shown_week == league.schedule[0].length - 1;
         document.getElementById("prev-week").disabled = shown_week == 0;
-        document.getElementById("next-week").style.display = "inline-block";
-        document.getElementById("prev-week").style.display = "inline-block";
     }
 
     function show_full_schedule() {
@@ -321,6 +319,7 @@
                 }
                 show_rankings();
             }
+            window.localStorage.setItem("league", JSON.stringify(league));
             refresh_flag = false;
         }
         setTimeout(refresh_schedule, 100);
@@ -342,5 +341,10 @@
             refresh_flag = true;
             shown_week = shown_week - 1;
         }
+    });
+    document.getElementById("reset-league").addEventListener("click", () => {
+        window.localStorage.clear();
+        league = null;
+        switch_card("game-setup-card");
     });
 })();
