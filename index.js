@@ -18,9 +18,19 @@ function switch_card(to_card) {
     document.getElementById(to_card).style.display = "block";
 }
 
-if (window.localStorage.length > 0) {
-    league = JSON.parse(window.localStorage.getItem("league"));
+league = JSON.parse(window.localStorage.getItem("league"));
+if (league !== null && league.n_humans > 0) {
     switch_card("schedule-card");
 } else {
+    league = {
+        n_humans: 0,
+        n_teams: 0,
+        teams: [],
+        game_results: [],
+        points: [],
+        schedule: [],
+        week: 0,
+        resolved: 0,
+    };
     switch_card("game-setup-card");
 }
