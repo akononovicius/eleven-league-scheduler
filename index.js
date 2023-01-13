@@ -30,7 +30,7 @@ let reset_choice = true;
 if (league !== null && league.n_humans > 0) {
     reset_choice = false;
     if (league.version !== current_version) {
-        reset_choice = prompt(
+        reset_choice = confirm(
             "It seems that there was an update, which breaks the compatability with your saved League. Press [OK], if you are fine with a reset, otherwise press [Cancel] and take note of the league standings. Sorry!"
         );
     }
