@@ -48,6 +48,9 @@ body {
 #schedule-card .fake-team {
     color: #666666;
 }
+#week-game-list {
+    margin-bottom: 20px;
+}
 #weekly-schedule .col {
     padding: 0.5rem 0;
 }
