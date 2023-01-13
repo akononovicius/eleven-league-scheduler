@@ -297,16 +297,7 @@
 
     let setup_league_btn = document.getElementById("setup-league");
     setup_league_btn.addEventListener("click", () => {
-        league = {
-            n_humans: 0,
-            n_teams: 0,
-            teams: [],
-            game_results: [],
-            points: [],
-            schedule: [],
-            week: 0,
-            resolved: 0,
-        };
+        reset_league();
         let error_flag = false;
 
         let human_teams = [];

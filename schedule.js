@@ -346,7 +346,7 @@
         let reply = confirm("Do you want to reset the league?");
         if (reply) {
             window.localStorage.removeItem("league");
-            league = null;
+            reset_league();
             switch_card("game-setup-card");
         }
     });
