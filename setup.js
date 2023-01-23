@@ -239,7 +239,7 @@
         let division3 = [
             { name: "Middleham L.C.", type: 1, division: 4 },
             { name: "Blackston Kings", type: 0, division: 4 },
-            { name: "Downton Utd.", type: 0, division: 4 },
+            { name: "Downtown Utd.", type: 0, division: 4 },
             { name: "Brickton F.C.", type: 2, division: 4 },
         ];
         let division32 = [
