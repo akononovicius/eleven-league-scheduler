@@ -258,7 +258,7 @@
             { name: "Sheepdale Shire", type: 1, division: 1 },
             { name: "Red Squirrels", type: 2, division: 1 },
             { name: "Port East", type: 0, division: 1 },
-            { name: "Grasdale County", type: 0, division: 1 },
+            { name: "Grassdale County", type: 0, division: 1 },
         ];
         let lower_list = [];
         let mid_list = [];
