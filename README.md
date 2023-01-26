@@ -53,11 +53,9 @@ their colors ("types") and respective divisions. This option may be useful
 for you with you play solo scenario, which has special rules regarding which
 opponents you play. Or if you have made your own custom opponent deck.
 
-When customizing your leagues have in mind that human players will first
-face some of the first 4 teams (1-4 teams), then some of the next 4 (5-8
-teams), and in the Epic mode another few of the next 4 (9-12 teams). In
-other words, the order is important! The teams in each quad will get
-shuffled among themselves to randomize the schedule.
+Note that after you customize the teams, they will be order by their
+divisions (from lowest to highest). The order of the teams will be
+shuffled within the division.
 
 ## Matches between non-human teams
 
