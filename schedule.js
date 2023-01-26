@@ -312,7 +312,7 @@
     function refresh_schedule() {
         if (refresh_flag) {
             if (league.n_teams > 0) {
-                if (league.full) {
+                if (league.show_all) {
                     show_full_schedule();
                 } else {
                     show_schedule();

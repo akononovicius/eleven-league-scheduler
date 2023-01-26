@@ -12,7 +12,7 @@
         <div id="main" class="container">
             <div id="game-setup-card" class="card">
                 <div class="card-body">
-                    <h5 id="menu-title" class="card-title">Game Setup</h5>
+                    <h5 id="menu-title" class="card-title mb-3">Game Setup</h5>
                     <div class="input-group mb-3">
                         <input id="player-name-1" type="text" class="form-control" placeholder="Player 1">
                         <input id="player-name-2" type="text" class="form-control" placeholder="Player 2">
@@ -38,8 +38,8 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="full-checkbox">
-                            <label class="form-check-label" for="full-checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="show-all-checkbox">
+                            <label class="form-check-label" for="show-all-checkbox">
                                 Show all games at once
                             </label>
                         </div>
@@ -54,14 +54,14 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="modified-resolve-checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="modified-resolve-checkbox" checked>
                             <label class="form-check-label" for="modified-resolve-checkbox">
                                 Use modified rolls when resolving non-human matches
                             </label>
                         </div>
                     </div>
-                    <button id="setup-league" class="btn btn-secondary mr-3" type="button">Setup League</button>
-                    <button id="read-about" class="btn btn-secondary mx-3" type="button">About</button>
+                    <button id="setup-league" class="btn btn-secondary me-3" type="button">Setup League</button>
+                    <button id="read-about" class="btn btn-secondary" type="button">About</button>
                 </div>
             </div>
             <div id="schedule-card" class="card">
@@ -70,8 +70,8 @@
                         <div id="weekly-schedule" class="col col-12 col-lg-6 col-xl-7">
                             <div id="week-game-list"></div>
                             <div>
-                                <button id="prev-week" class="btn btn-secondary" type="button">Prev. Week</button>
-                                <button id="next-week" class="btn btn-secondary" type="button">Next Week</button>
+                                <button id="prev-week" class="btn btn-secondary me-3" type="button">Prev. Week</button>
+                                <button id="next-week" class="btn btn-secondary me-3" type="button">Next Week</button>
                                 <button id="reset-league" class="btn btn-danger" type="button">Reset</button>
                             </div>
                         </div>

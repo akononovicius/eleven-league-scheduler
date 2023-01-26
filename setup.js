@@ -325,7 +325,7 @@
             error_flag = true;
         }
 
-        league.full = document.getElementById("full-checkbox").checked;
+        league.show_all = document.getElementById("show-all-checkbox").checked;
         league.auto_resolve = document.getElementById(
             "auto-resolve-checkbox"
         ).checked;
