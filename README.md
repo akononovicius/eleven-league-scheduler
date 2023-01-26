@@ -27,7 +27,7 @@ strongest opponent teams as there are human teams.
 Note that in the Epic mode it is impossible to build a balanced schedule
 while following the guideline of "easier opponents first". This means that
 if you play Epic mode with 3 or 4 players, some of the players will face 4
-easier opponents, while other will face 3. This is so, because it is
+easier opponents, while others will face 3. This is so, because it is
 impossible to build 12 team league schedule where all players would face
 just 4 or just 3 easy opponents.
 
