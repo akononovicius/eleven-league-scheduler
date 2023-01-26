@@ -2,14 +2,9 @@
 
 JavaScript app which generates schedules for board game
 [Eleven](https://boardgamegeek.com/boardgame/329716/eleven-football-manager-board-game).
-Currently it supports Standard League mode (6 weeks) and Variant 
-Epic League mode
-(10 weeks). It also allows for player vs player matches, and it resolves
-matches between non-human opponents.
-
-It doesn't support the [official Epic League
-mode](https://boardgamegeek.com/thread/3001927/article/41487578#41487578)
-for the reasons which are discussed below.
+It supports variants of the Standard mode (6 week game) and the Epic mode
+(10 week game). If multiple players play the game, player vs player matches
+will be arranged.
 
 ## Schedule
 
@@ -18,50 +13,51 @@ are first scheduled to play against easier opponents (from lower divisions),
 and only after that they play against stronger teams (from higher divisions)
 and/or among themselves.
 
-To make leagues a bit more realistic all opponent teams are assigned
-opponents. Some teams will play against humans, others will play among
-themselves.
+To make leagues more consistent all opponent teams are assigned opponents
+each week. Some of the opponent teams will play against humans, others will
+play among themselves.
 
-Note that no team plays two games in a single week. This raises an issue
-when there is an odd number of human players. To resolve it this app adds
-"fake" team into the mix - "Forgers End". Human players will never play
-against this team, but it will play against left-over non-human teams.
+Unlike in the core game, here we build leagues, which are consistent with
+Solo Campaign expansion and scale consistently when playing with multiple
+players. In other words, leagues in the Standard mode will always have 8
+teams independent of the player count. Likewise leagues in the Epic mode
+will always have 12 teams. This means that we remove as much of the
+strongest opponent teams as there are human teams.
 
-"Forgers End" will have random color assigned at the start of the league. It
-will be assigned to the lower division (in the Standard mode) or to the
-middle division (in the Epic mode). This division is relevant when resolving
-matches against other non-human teams.
+Note that in the Epic mode it is impossible to build a balanced schedule
+while following the guideline of "easier opponents first". This means that
+if you play Epic mode with 3 or 4 players, some of the players will face 4
+easier opponents, while other will face 3. This is so, because it is
+impossible to build 12 team league schedule where all players would face
+just 4 or just 3 easy opponents.
 
-## Variant Epic League
+## Super League mode
 
-Original rule book is pretty vague about how the opponent deck should be
-built when playing in the Epic League mode. After a while an official
-explanation on how to do it appeared on the [Board Game Geek
-forums](https://boardgamegeek.com/thread/3001927/article/41487578#41487578),
-but, personally, I do not like the official variant that much. I feel that
-there is just a minor difference between the divisions this way. So, I have
-decided to stay with my initial implementation of the Epic League.
+When playing with 4 players no player would face any of the strongest
+opponents. Actually these opponents would be removed from any of our
+consistent Standard or Epic mode leagues. So, when playing with 4 players
+you can choose to play Super League and face the strongest opponents.
 
-As implemented, Variant Epic League can be played in two divisions. The
-lower (second) division is built using 3, 3/2 and 2/1 division opponent team
-decks. The higher (first) division is built using 3/2, 2/1 and 1 division
-opponent team decks. Either way, start by placing three hardest opponent
-cards (from 2/1 or 1 division deck), then four medium opponent cards (from
-3/2 or 2/1 respectively) on top of them and, finally, three easiest opponent
-cards (from 3 or 3/2 respectively) on the very top of the opponent deck.
+In Super League player vs player matches are played during the first three
+weeks. These initial player vs player matches replace matches against
+easiest opponents instead of replacing matches against the strongest
+opponents.
 
-For example, if you want to play in the first division, then first you will
-face 3 opponents from 3/2 deck, then 2 opponents from 2/1 deck. After these
-five opponents do the winter break. Then face the other 2 opponents from 2/1
-deck, and finally 3 opponents from the 1 deck.
+Note that Super League can only be played in the first division and only
+when playing with 4 players.
 
-Why this variant is better than [the official Epic
-mode](https://boardgamegeek.com/thread/3001927/article/41487578#41487578)?
-I feel that the official Epic mode is not a natural extension of the
-Standard mode. In the Standard mode you would play 3 easier opponents
-followed by 3 harder opponents. The official Epic mode changes this pacing
-(you play either 4 or 2 easy opponents first), while Variant Epic League
-simply extends the Standard mode (you still play 3 easy opponents first).
+## League customization
+
+If you check corresponding box, then you'll be able to edit team names,
+their colors ("types") and respective divisions. This option may be useful
+for you with you play solo scenario, which has special rules regarding which
+opponents you play. Or if you have made your own custom opponent deck.
+
+When customizing your leagues have in mind that human players will first
+face some of the first 4 teams (1-4 teams), then some of the next 4 (5-8
+teams), and in the Epic mode another few of the next 4 (9-12 teams). In
+other words, the order is important! The teams in each quad will get
+shuffled among themselves to randomize the schedule.
 
 ## Matches between non-human teams
 
@@ -80,7 +76,7 @@ Green team subtracts one goal if the standard die rolled 3 or less
 
 Blue team changes their "behavior" depending on their opponent. Against
 green team they can potentially score additional goal (as if they were a red
-team). Against red team they can potentially loose a goal (as if they were a
+team). Against red team they can potentially lose a goal (as if they were a
 green team).
 
 ## Making your own schedules

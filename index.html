@@ -20,21 +20,23 @@
                         <input id="player-name-4" type="text" class="form-control" placeholder="Player 4">
                     </div>
                     <div class="input-group mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="pvp-checkbox">
-                            <label class="form-check-label" for="pvp-checkbox">
-                                Player vs Player matches
-                            </label>
-                        </div>
+                        <select id="division-select" class="form-select">
+                            <option value="1" selected>First division (2/1 and 1 teams)</option>
+                            <option value="2">Second division (3/2 and 2/1 teams)</option>
+                            <option value="3">Third division (3 and 3/2 teams)</option>
+                            <option value="4">Epic First division (3/2, 2/1 and 1 teams)</option>
+                            <option value="5">Epic Second division (3, 3/2 and 2/1 teams)</option>
+                            <option value="6">Standard Super League (1 teams; 4P only!)</option>
+                            <option value="7">Epic Super League (2/1 and 1 teams; 4P only!)</option>
+                        </select>
                     </div>
                     <div class="input-group mb-3">
-                        <select id="division-select" class="form-select">
-                            <option value="1">First division (2/1 and 1 teams)</option>
-                            <option value="2">Second division (3/2 and 2/1 teams)</option>
-                            <option value="3" selected>Third division (3 and 3/2 teams)</option>
-                            <option value="4">Variant Epic League: First division (3/2, 2/1 and 1 teams)</option>
-                            <option value="5">Variant Epic League: Second division (3, 3/2 and 2/1 teams)</option>
-                        </select>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="customize-checkbox">
+                            <label class="form-check-label" for="customize-checkbox">
+                                Customize teams
+                            </label>
+                        </div>
                     </div>
                     <div class="input-group mb-3">
                         <div class="form-check">
@@ -64,6 +66,15 @@
                     <button id="read-about" class="btn btn-secondary" type="button">About</button>
                 </div>
             </div>
+            <div id="custom-setup-card" class="card">
+                <div class="card-body">
+                    <h5 id="menu-title" class="card-title mb-3">Customize Teams</h5>
+                    <div id="custom-team-body">
+                    </div>
+                    <button id="setup-custom-league" class="btn btn-secondary me-3" type="button">Generate Schedule</button>
+                    <button id="reset-custom-league" class="btn btn-danger" type="button">Reset</button>
+                </div>
+            </div>
             <div id="schedule-card" class="card">
                 <div class="card-body">
                     <div class="row">
@@ -82,6 +93,7 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <script src="./index.js"></script>
+        <script src="./custom.js"></script>
         <script src="./setup.js"></script>
         <script src="./schedule.js"></script>
     </body>

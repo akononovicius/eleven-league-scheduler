@@ -2,9 +2,8 @@
     let shown_week = 0;
 
     function is_human_team(id) {
-        let n_ai_teams =
-            league.n_teams - league.n_humans - (league.n_humans % 2);
-        return n_ai_teams <= id && id < n_ai_teams + league.n_humans;
+        let n_ai_teams = league.n_teams - league.n_humans;
+        return n_ai_teams <= id;
     }
 
     function points_add(id, result) {
@@ -96,15 +95,13 @@
     }
 
     function get_team_class(team) {
-        let team_class = "fake-team";
+        let team_class = "human-team";
         if (team.type == 0) {
             team_class = "red-team";
         } else if (team.type == 1) {
             team_class = "blue-team";
         } else if (team.type == 2) {
             team_class = "green-team";
-        } else if (team.type == 3) {
-            team_class = "human-team";
         }
         return team_class;
     }
@@ -311,7 +308,7 @@
 
     function refresh_schedule() {
         if (refresh_flag) {
-            if (league.n_teams > 0) {
+            if (league.ready) {
                 if (league.show_all) {
                     show_full_schedule();
                 } else {

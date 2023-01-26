@@ -1,7 +1,8 @@
-let current_version = 230113;
+let current_version = 230126;
 let league = null;
 
-let refresh_flag = true;
+let refresh_flag = false;
+let refresh_custom_flag = false;
 
 function reset_league() {
     league = {
@@ -17,7 +18,6 @@ function reset_league() {
     };
     window.localStorage.setItem("league", JSON.stringify(league));
 }
-
 function switch_card(to_card) {
     document.querySelectorAll(".card").forEach((elem) => {
         elem.style.display = "none";
@@ -39,5 +39,11 @@ if (reset_choice) {
     reset_league();
     switch_card("game-setup-card");
 } else {
-    switch_card("schedule-card");
+    if (league.ready) {
+        refresh_flag = true;
+        switch_card("schedule-card");
+    } else {
+        refresh_custom_flag = true;
+        switch_card("custom-setup-card");
+    }
 }
