@@ -78,7 +78,7 @@
             { name: "Royalford Town", type: 1, division: 2 },
             { name: "Smokepool City", type: 2, division: 2 },
             { name: "Northdale Town", type: 2, division: 2 },
-            { name: "Brighsbury F.C.", type: 0, division: 2 },
+            { name: "Brightsbury F.C.", type: 0, division: 2 },
         ];
         let division1 = [
             { name: "Sheepdale Shire", type: 1, division: 1 },
