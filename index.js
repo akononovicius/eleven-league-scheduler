@@ -17,7 +17,26 @@ function reset_league() {
         resolved: 0,
     };
     window.localStorage.setItem("league", JSON.stringify(league));
+    reset_league_form();
 }
+
+function reset_league_form() {
+    document
+        .querySelectorAll("#game-setup-card .player-names input[type=text]")
+        .forEach((elem) => {
+            elem.value = "";
+        });
+
+    document.getElementById("division-select").value = 1;
+
+    document
+        .querySelectorAll("#game-setup-card input[type=checkbox]")
+        .forEach((elem) => {
+            elem.checked = false;
+        });
+    document.getElementById("modified-resolve-checkbox").checked = true;
+}
+
 function switch_card(to_card) {
     document.querySelectorAll(".card").forEach((elem) => {
         elem.style.display = "none";
