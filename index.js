@@ -17,7 +17,6 @@ function reset_league() {
         resolved: 0,
     };
     window.localStorage.setItem("league", JSON.stringify(league));
-    reset_league_form();
 }
 
 function reset_league_form() {
@@ -56,6 +55,7 @@ if (league !== null && league.n_humans > 0) {
 }
 if (reset_choice) {
     reset_league();
+    reset_league_form();
     switch_card("game-setup-card");
 } else {
     if (league.ready) {

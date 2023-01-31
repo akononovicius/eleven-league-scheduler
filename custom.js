@@ -66,6 +66,7 @@
             if (reply) {
                 window.localStorage.removeItem("league");
                 reset_league();
+                reset_league_form();
                 switch_card("game-setup-card");
             }
         });
