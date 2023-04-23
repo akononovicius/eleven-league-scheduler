@@ -273,8 +273,8 @@
             (shown_week == league.week && league.resolved < league.n_teams) ||
             shown_week == league.schedule[0].length - 1;
         document.getElementById("prev-week").disabled = shown_week == 0;
-        document.getElementById("next-week").style.display = "block";
-        document.getElementById("prev-week").style.display = "block";
+        document.getElementById("next-week").style.display = "inline-block";
+        document.getElementById("prev-week").style.display = "inline-block";
     }
 
     function show_full_schedule() {
