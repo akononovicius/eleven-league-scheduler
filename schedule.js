@@ -51,7 +51,7 @@
             let g_1 = parseInt(TYPES[team_1.type][r_1]);
             let g_2 = parseInt(TYPES[team_2.type][r_2]);
             if (league.modified_resolve) {
-                let r_standard = Math.floor(Math.random() * 6);
+                let r_standard = Math.ceil(Math.random() * 6);
                 if (
                     (team_1.type == 0 ||
                         (team_1.type == 1 && team_2.type == 2)) &&
