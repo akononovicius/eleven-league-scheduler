@@ -263,7 +263,13 @@
             let against = league.schedule[team_id][shown_week];
             already_listed.push(team_id);
             already_listed.push(against);
-            html = `${html}${get_game_html(team_id, against)}`;
+            let game_html = "";
+            if (league.home_away[team_id][shown_week] == 1) {
+                game_html = get_game_html(team_id, against);
+            } else {
+                game_html = get_game_html(against, team_id);
+            }
+            html = `${html}${game_html}`;
         });
         document.getElementById("week-game-list").innerHTML = html;
         document.querySelectorAll("#week-game-list .btn").forEach((elem) => {
@@ -294,7 +300,13 @@
                 let against = league.schedule[team_id][league.week];
                 already_listed.push(team_id);
                 already_listed.push(against);
-                html = `${html}${get_game_html(team_id, against)}`;
+                let game_html = "";
+                if (league.home_away[team_id][league.week] == 1) {
+                    game_html = get_game_html(team_id, against);
+                } else {
+                    game_html = get_game_html(against, team_id);
+                }
+                html = `${html}${game_html}`;
             });
             html = `${html}<hr>`;
         }
