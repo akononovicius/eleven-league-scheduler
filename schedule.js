@@ -356,6 +356,7 @@
     document.getElementById("reset-league").addEventListener("click", () => {
         let reply = confirm("Do you want to reset the league?");
         if (reply) {
+            shown_week = 0;
             window.localStorage.removeItem("league");
             reset_league();
             reset_league_form();
