@@ -290,4 +290,8 @@
             "_self"
         );
     });
+    let full_season_app_btn = document.getElementById("full-season-app");
+    full_season_app_btn.addEventListener("click", () => {
+        window.open("./full-season-app/", "_self");
+    });
 })();

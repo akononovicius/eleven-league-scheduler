@@ -271,8 +271,8 @@
             }
             html = `${html}${game_html}`;
         });
-        document.getElementById("week-game-list").innerHTML = html;
-        document.querySelectorAll("#week-game-list .btn").forEach((elem) => {
+        document.getElementById("game-list").innerHTML = html;
+        document.querySelectorAll("#game-list .btn").forEach((elem) => {
             elem.addEventListener("click", resolve);
         });
         document.getElementById("next-week").disabled =
@@ -310,8 +310,8 @@
             });
             html = `${html}<hr>`;
         }
-        document.getElementById("week-game-list").innerHTML = html;
-        document.querySelectorAll("#week-game-list .btn").forEach((elem) => {
+        document.getElementById("game-list").innerHTML = html;
+        document.querySelectorAll("#game-list .btn").forEach((elem) => {
             elem.addEventListener("click", resolve);
         });
         document.getElementById("next-week").disabled = true;

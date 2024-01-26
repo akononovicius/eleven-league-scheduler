@@ -45,10 +45,10 @@ body {
 #schedule-card .green-team {
     color: #00a650;
 }
-#week-game-list {
+#game-list {
     margin-bottom: 20px;
 }
-#weekly-schedule .col {
+#schedule-body .col {
     padding: 0.5rem 0;
 }
 #schedule-card .header {

@@ -1,5 +1,6 @@
 let current_version = 230426;
 let league = null;
+let league_name = "league";
 
 let refresh_flag = false;
 let refresh_custom_flag = false;
@@ -16,7 +17,7 @@ function reset_league() {
         week: 0,
         resolved: 0,
     };
-    window.localStorage.setItem("league", JSON.stringify(league));
+    window.localStorage.setItem(league_name, JSON.stringify(league));
 }
 
 function reset_league_form() {
@@ -43,7 +44,7 @@ function switch_card(to_card) {
     document.getElementById(to_card).style.display = "block";
 }
 
-league = JSON.parse(window.localStorage.getItem("league"));
+league = JSON.parse(window.localStorage.getItem(league_name));
 let reset_choice = true;
 if (league !== null && league.n_humans > 0) {
     reset_choice = false;
