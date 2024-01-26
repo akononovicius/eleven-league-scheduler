@@ -19,11 +19,11 @@ made to allow bigger variation in non-human team strengths.
 
 To account for a possible bigger variation in team strengths the "modified
 rolls" match resolution variant is further modified. First important change
-is that goals are treated as opportunities (roll standard die on a roll of
-4+ the goal is scored). The second change is that now stronger teams get
-additional opportunities based on difference in team strength ranking. So,
+is that goals are treated as opportunities (roll standard die, on a roll of
+4+ the goal is scored). The second change is that now the stronger teams get
+additional opportunities based on the difference in team strength rank. So,
 if the "World class" team plays "Normal team", the "World class" team would
-get 2 additional opportunities.
+get 2 additional opportunities (not 1 as per the original rules).
 
 **Note:** In theory, the leagues managed by the Full Season App, do not
 interfere with the leagues managed by the Eleven Scheduler App.
