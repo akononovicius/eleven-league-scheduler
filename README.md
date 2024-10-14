@@ -50,7 +50,7 @@ when playing with 4 players.
 
 If you check corresponding box, then you'll be able to edit team names,
 their colors ("types") and respective divisions. This option may be useful
-for you with you play solo scenario, which has special rules regarding which
+for you if you play solo scenario which has special rules regarding which
 opponents you play. Or if you have made your own custom opponent deck.
 
 Note that after you customize the teams, they will be order by their
