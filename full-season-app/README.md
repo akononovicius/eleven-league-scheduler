@@ -15,9 +15,9 @@ This app uses slightly different language for classifying non-human teams.
 They still come in the usual three color types (red, green and blue), but
 the division classification is replaced by "World class" / "Strong team" /
 "Normal team" / "Relegation material" classification. This replacement was
-made to allow bigger variation in non-human team strengths.
+made to allow greater variation in non-human team strengths.
 
-To account for a possible bigger variation in team strengths the "modified
+To account for a possible greater variation in team strengths the "modified
 rolls" match resolution variant is further modified. First important change
 is that goals are treated as opportunities (roll standard die, on a roll of
 4+ the goal is scored). The second change is that now the stronger teams get
